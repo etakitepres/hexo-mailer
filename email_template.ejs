@@ -1,0 +1,29 @@
+<html>
+<head><meta charset='utf-8'></head>
+<body>
+  <p>Hey <%= firstName %>,</p>
+  <br>
+  <p>
+    Hello siblings! This email contains nothing of importance. BUT, it is a huge accomplishment in the pre-work for my class! I composed/coded this email in a text editor, built a javascript file that customized the email for everyone, and sent this email to you from a command line in my computer terminal! Wahooo :) See below for the default email content (which I did not write):
+  </p> 
+  <p>
+    How are you doing? I'm doing well. It's been almost <%= monthsSinceContact %> months
+    since we last talked. I'm learning to code full-time at Fullstack Academy and am having a great time. This is an auto-generated email I learned how to make in Fullstack Foundations.
+ 
+  </p>
+  <p>
+    I've been blogging about my experiences at Fullstack on my blog. 
+    Look at my most recent posts:
+    <ul>
+      <% for(var i=0; i<latestPosts.length; i++) {%>
+         <li><a href=<%= latestPosts[i].link.href %>><%= latestPosts[i].title %></li>
+      <% } %>
+    </ul>
+  </p>
+ 
+  <p>
+    Talk soon,<br>
+    Katie
+  </p>
+</body>
+</html>
